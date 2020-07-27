@@ -32,6 +32,8 @@ Things you may want to cover:
 |email|string|null: false|
 |password|string|null: false|
 ### Association
+- has_many :posts
+- has_many :comments
 
 ## postsテーブル
 |Column|Type|Options|
@@ -40,6 +42,12 @@ Things you may want to cover:
 |image||null: false|
 |user_id|null: false, foreign_key: true|
 ### Association
+- belongs_to :user
+- has_many :comments
+- has_many :posts_categories
+- has_many :categories, through: :posts_categories
+- has_many :posts_areas
+- has_many :areas, through: :posts_areas
 
 ## commentsテーブル
 |Column|Type|Options|
@@ -47,20 +55,24 @@ Things you may want to cover:
 |text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
-
+- belongs_to :post
+- belongs_to :user
 
 ## categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|text|null: false|
 ### Association
+- has_many :posts_categories
+- has_many :posts, through: :posts_categories
 
 ## areasテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|text|null: false|
 ### Association
-
+- has_many :posts_areas
+- has_many :posts, through: :posts_areas
 
 ## posts_categoriesテーブル
 |Column|Type|Options|
@@ -68,6 +80,8 @@ Things you may want to cover:
 |post_id|integer|null: false, foreign_key: true|
 |category_id|integer|null: false, foreign_key: true|
 ### Association
+- belongs_to :post
+- belongs_to :category
 
 ## posts_areasテーブル
 |Column|Type|Options|
@@ -75,3 +89,5 @@ Things you may want to cover:
 |post_id|integer|null: false, foreign_key: true|
 |area_id|integer|null: false, foreign_key: true|
 ### Association
+- belongs_to :post
+- belongs_to :areas
