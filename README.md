@@ -22,3 +22,56 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# animal-searchのDB設計
+
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|email|string|null: false|
+|password|string|null: false|
+### Association
+
+## postsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|text||
+|image||null: false|
+|user_id|null: false, foreign_key: true|
+### Association
+
+## commentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+### Association
+
+
+## categoriesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|text|null: false|
+### Association
+
+## areasテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|text|null: false|
+### Association
+
+
+## posts_categoriesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|post_id|integer|null: false, foreign_key: true|
+|category_id|integer|null: false, foreign_key: true|
+### Association
+
+## posts_areasテーブル
+|Column|Type|Options|
+|------|----|-------|
+|post_id|integer|null: false, foreign_key: true|
+|area_id|integer|null: false, foreign_key: true|
+### Association
