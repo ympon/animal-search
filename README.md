@@ -38,8 +38,8 @@ Things you may want to cover:
 ## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text||
-|image||null: false|
+|text|string||
+|image|text|null: false|
 |user_id|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
