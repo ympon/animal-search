@@ -6,6 +6,11 @@
   display: flex;
 }
 
+a {
+  text-decoration: none;
+  color: #f6b7aa ;
+}
+
 .body {
   display: flex;
 }
@@ -24,7 +29,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 3px solid #f6b7aa ;
   &__logo {
     color: #0e536d;
     padding-left: 30px;
@@ -39,5 +43,13 @@
   height: calc(100vh - 100px);
   .category {
     color: #0e536d;
+    font-size: 90px;
+    .category-upper {
+      
+    }
+    .category-row {
+      
+    }
+    
   }
 }

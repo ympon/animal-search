@@ -11,15 +11,17 @@
         .search-form
           .search-input
       .category
-        .category__bugs
-          虫
-        .category__marine-products
-          魚介類
-        .category__birds
-          鳥類
-        .category__reptiles
-          は虫類
-        .category__amphibian
-          両生類
-        .category__mammalian
-          ほ乳類
+        .category-upper
+          = link_to "#", class: "bugs__icon" do
+            = icon('fas', 'bug')
+          = link_to "#", class: "fish__icon" do
+            = icon('fas', 'fish')  
+          = link_to "#", class: "birds__icon" do
+            = icon('fas', 'kiwi-bird')
+        .category-row
+          = link_to "#", class: "amphibian__icon" do
+            = icon('fas', 'frog')
+          = link_to "#", class: "reptiles__icon" do
+            = icon('fas', 'otter')
+          = link_to "#", class: "mammalian__icon" do
+            = icon('fas', 'paw')
