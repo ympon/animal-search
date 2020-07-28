@@ -38,7 +38,7 @@ Things you may want to cover:
 ## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|string||
+|text|string|null: false|
 |image|text|null: false|
 |user_id|null: false, foreign_key: true|
 ### Association
