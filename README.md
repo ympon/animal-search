@@ -61,10 +61,12 @@ Things you may want to cover:
 ## categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false|
+|name|string|null: false, index: true|
+|ancestry|string|index: true|
 ### Association
 - has_many :posts_categories
 - has_many :posts, through: :posts_categories
+- has_ancesty
 
 ## areasテーブル
 |Column|Type|Options|
