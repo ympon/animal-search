@@ -36,6 +36,7 @@ a:hover {
   height: calc(100vh - 100px);
   padding: 10px 10px;
   color: #fae06e;
+  overflow: scroll;
 }
 
 .Form{
@@ -64,7 +65,6 @@ a:hover {
     color: #0e536d;
     cursor: pointer;
   }
-
   &__submit {
     background-color: #5188b1;
     border: none;

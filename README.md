@@ -39,7 +39,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |text|string|null: false|
-|image|text|null: false|
+|image|string|null: false|
 |user_id|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
