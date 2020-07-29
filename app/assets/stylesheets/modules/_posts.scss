@@ -2,6 +2,7 @@
   text-align: center;
   &__icon {
     font-size: 140px;
+    color: #f6b7aa ;
   }
   &__text {
     font-size: 35px;
@@ -19,11 +20,10 @@
 
 a {
   text-decoration: none;
-  color: #f6b7aa ;
 }
 
 a:hover {
-  opacity: 0.5;
+  opacity: 0.75;
 }
 
 .body {
@@ -34,6 +34,50 @@ a:hover {
   background: #0e536d;
   width: 400px;
   height: calc(100vh - 100px);
+  padding: 10px 10px;
+  color: #fae06e;
+}
+
+.Form{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  &__contents{
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+  }
+  &__inputContent {
+    border: none;
+    height: 50px;
+    width: 100%;
+    padding: 0 45px 0 15px;
+  }
+  &__inputImage {
+    height: 50px;
+    position: absolute;
+    right: 10px;
+  }
+  .Form__icon {
+    line-height: 50px;
+    font-size: 25px;
+    color: #0e536d;
+    cursor: pointer;
+  }
+
+  &__submit {
+    background-color: #5188b1;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    height: 50px;
+    margin-left: 15px;
+    padding: 0 30px;
+    cursor: pointer;
+  }
+  .Hidden {
+    display: none;
+  }
 }
 
 .mainTitle {

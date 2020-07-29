@@ -1,11 +1,18 @@
 .menu
   .header
     .mainTitle
-      .mainTitle__logo
+      %a{ href: "/", class: "mainTitle__logo"} 
         Animal Search
   .body
     .sideMenu
-      .new-post
+      名前がわからない時は『教えて！』と書いて投稿！
+      %form.Form
+        .Form__contents
+          %input.Form__inputContent{type: "text", placeholder: "生き物の名前"}
+          %label.Form__inputImage
+            = icon("far", "image", class: "Form__icon")
+            %input.Hidden{type: 'file'}
+        %input.Form__submit{type: 'submit', value: '投稿'}    
     .mainMenu
       .search
         .search-form
