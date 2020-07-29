@@ -12,16 +12,34 @@
           .search-input
       .category
         .category-upper
-          = link_to "#", class: "bugs__icon" do
-            = icon('fas', 'bug')
-          = link_to "#", class: "fish__icon" do
-            = icon('fas', 'fish')  
-          = link_to "#", class: "birds__icon" do
-            = icon('fas', 'kiwi-bird')
+          .category-upper__bugs
+            = link_to "#", class: "category-upper__bugs__icon" do
+              = icon('fas', 'bug')
+            .category-upper__bugs__text
+              虫
+          .category-upper__fish
+            = link_to "#", class: "category-upper__fish__icon" do
+              = icon('fas', 'fish')  
+            .category-upper__fish__text
+              魚介類
+          .category-upper__birds
+            = link_to "#", class: "category-upper__birds__icon" do
+              = icon('fas', 'kiwi-bird')
+            .category-upper__birds__text
+              鳥類
         .category-row
-          = link_to "#", class: "amphibian__icon" do
-            = icon('fas', 'frog')
-          = link_to "#", class: "reptiles__icon" do
-            = icon('fas', 'otter')
-          = link_to "#", class: "mammalian__icon" do
-            = icon('fas', 'paw')
+          .category-row__amphibian
+            = link_to "#", class: "category-row__amphibian__icon" do
+              = icon('fas', 'frog')
+            .category-row__amphibian__text
+              両生類
+          .category-row__reptiles
+            = link_to "#", class: "category-row__reptiles__icon" do
+              = icon('fas', 'otter')
+            .category-row__reptiles__text
+              は虫類
+          .category-row__mammalian
+            = link_to "#", class: "category-row__mammalian__icon" do
+              = icon('fas', 'paw')
+            .category-row__mammalian__text
+              ほ乳類

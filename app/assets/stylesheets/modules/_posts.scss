@@ -1,3 +1,14 @@
+@mixin icon-style() {
+  text-align: center;
+  &__icon {
+    font-size: 140px;
+  }
+  &__text {
+    font-size: 35px;
+  }
+}
+
+
 * {
   box-sizing: border-box;
 }
@@ -11,13 +22,16 @@ a {
   color: #f6b7aa ;
 }
 
+a:hover {
+  opacity: 0.5;
+}
+
 .body {
   display: flex;
 }
 
 .sideMenu {
   background: #0e536d;
-
   width: 400px;
   height: calc(100vh - 100px);
 }
@@ -32,8 +46,9 @@ a {
   &__logo {
     color: #0e536d;
     padding-left: 30px;
-    font-size: 30px;
+    font-size: 50px;
     font-weight: bold;
+    font-family:  'Londrina Shadow', cursive;
   }
 }
 
@@ -43,12 +58,33 @@ a {
   height: calc(100vh - 100px);
   .category {
     color: #0e536d;
-    font-size: 90px;
+    padding: 0 30px;
+    font-family: 'Wawati SC',sans-serif;
     .category-upper {
-      
+      display: flex;
+      justify-content: space-around;
+      &__bugs {
+        @include icon-style();
+      }
+      &__fish {
+        @include icon-style();
+      }
+      &__birds {
+        @include icon-style();
+      }
     }
     .category-row {
-      
+      display: flex;
+      justify-content: space-around;
+      &__amphibian {
+        @include icon-style();
+      }
+      &__reptiles {
+        @include icon-style();
+      }
+      &__mammalian {
+        @include icon-style();
+      }
     }
     
   }
