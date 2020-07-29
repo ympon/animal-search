@@ -79,8 +79,8 @@ Things you may want to cover:
 ## posts_categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|post_id|integer|null: false, foreign_key: true|
-|category_id|integer|null: false, foreign_key: true|
+|post_id|references|null: false|
+|category_id|references|null: false|
 ### Association
 - belongs_to :post
 - belongs_to :category
