@@ -1,1 +1,16 @@
-.post
+.send-area
+  .header
+    %a{ href: "/", class: "title__logo"} 
+      Animal Search
+  .body
+    = form_with model: [@category, @post], html: {class: "Form"}, local: true do |f|
+      .Form__contents
+        生き物の名前がわからない時は『教えて！』と入力しよう
+        = f.text_field :text, class: 'Form__inputContent', placeholder: "生き物の名前を入力"
+        = f.label :image, class: 'Form__inputImage' do
+          = icon('far', 'image', class: 'Form__icon')
+          = f.file_field :image, class: 'Hidden'
+        %button{type: "submit", class:'Form__submit'}   
+          %i.fas.fa-paper-plane
+          .letter
+            投稿

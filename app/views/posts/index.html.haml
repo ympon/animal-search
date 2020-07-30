@@ -5,10 +5,11 @@
         Animal Search
   .body
     .sideMenu
-      = link_to "new_post_path", class: "post__btn" do
-        = icon('fas', 'image')
-      .post__btn__text
-        画像を投稿！
+      .sideMenu__new
+        = link_to "new_post_path", class: "post__btn" do
+          = icon('fas', 'image')
+        .post__btn__text
+          画像を投稿！
     .mainMenu
       .search
         .search-form
