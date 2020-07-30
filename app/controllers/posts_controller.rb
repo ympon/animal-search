@@ -9,8 +9,12 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
-    @post.save!
+    @post.save
     redirect_to "/", notice: "『#{@post.text}』を登録しました！"
+  end
+
+  def show
+    @post = Post.new
   end
 
   private
