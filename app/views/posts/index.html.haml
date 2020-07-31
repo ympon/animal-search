@@ -1,16 +1,30 @@
 .menu
   .header
-    .mainTitle
-      %a{ href: "/", class: "mainTitle__logo"} 
+    .main-title
+      %a{ href: "/", class: "main-title__logo"} 
         Animal Search
+      .user-management
+        - if user_signed_in?
+          = link_to "ログアウト", "destroy_user_session_path", class: "logout"
+        - else
+          = link_to "ログイン", "new_user_session_path", class: "post"
+          = link_to "新規登録", "new_user_registration_path", class: "post"
   .body
-    .sideMenu
-      .sideMenu__new
+    .side-menu
+      .post__btn__text
+        画像を投稿！
+      .side-menu__new
         = link_to "posts/new", class: "post__btn" do
-          = icon('fas', 'image')
-        .post__btn__text
-          画像を投稿！
-    .mainMenu
+          = icon('fas', 'camera')
+      .post-new
+        - @posts.each do |post|
+          .post-new__text
+            = post.text if post.text?
+          .post-new__date
+            = post.created_at.strftime("%Y年%m月%d日 %H時%M分")
+          .post-new__image
+            = image_tag(post.image.to_s) if post.image?
+    .main-menu
       .search
         .search-form
           .search-input
