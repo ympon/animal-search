@@ -39,26 +39,6 @@ a:hover {
   display: flex;
 }
 
-.side-menu {
-  background: #0e536d;
-  width: 400px;
-  height: calc(100vh - 100px);
-  padding: 10px 10px;
-  color: #fae06e;
-  text-align: center;
-  overflow: scroll;
-  .post__btn__text{
-    font-family: 'Wawati SC',sans-serif;
-    font-size: 30px;  
-  }
-  .post__btn{
-    text-align: center;
-    text-decoration: none;
-    color: #fae06e;
-    font-size: 130px; 
-  }
-}
-
 .main-title {
   background: #fae06e;
   width: 100vw;
@@ -80,6 +60,44 @@ a:hover {
 .logout{
   @include menu-icon();
 }
+
+
+.side-menu {
+  background: #0e536d;
+  width: 400px;
+  height: calc(100vh - 100px);
+  padding-top: 10px;
+  color: #fae06e;
+  text-align: center;
+  overflow: scroll;
+  .post__btn__text{
+    font-family: 'Wawati SC',sans-serif;
+    font-size: 30px;  
+  }
+  .post__btn{
+    text-align: center;
+    text-decoration: none;
+    color: #fae06e;
+    font-size: 130px; 
+  }
+}
+
+.post-new {
+  &__text {
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 5px;
+    border-top: dotted 3px #fff5e0;
+  }
+  &__date {
+     font-size: 15px;
+     padding-bottom: 3px;
+  }
+  &__image {
+    padding-bottom: 10px;
+  }
+}
+
 
 .main-menu {
   background: #fff5e0;
