@@ -24,6 +24,7 @@
           .post-new__image
             = image_tag(post.image.to_s) if post.image?
           = link_to "削除", post, method: :delete, class: "post-new__delete"
+          = link_to "編集", edit_post_path(post.id), method: :get, class: "post-new__edit"
     .main-menu
       .search
         .search-form
