@@ -84,20 +84,26 @@ a:hover {
 
 .post-new {
   &__text {
-    font-size: 25px;
+    font-size: 27px;
     font-weight: bold;
     padding-top: 5px;
     border-top: dotted 3px #fff5e0;
   }
   &__date {
-     font-size: 15px;
+    font-size: 15px;
      padding-bottom: 3px;
   }
   &__image {
     padding-bottom: 10px;
   }
+  &__delete {
+    color: #0e536d;
+    background: #fae06e;
+    font-size: 20px;
+    margin-bottom: 8px;
+    padding: 5px 7px;
+  }
 }
-
 
 .main-menu {
   background: #fff5e0;
