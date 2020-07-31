@@ -9,6 +9,15 @@
   }
 }
 
+@mixin menu-icon() {
+  background: #0e536d;
+  margin-right: 15px;
+  padding: 0 8px;
+  color: #fff;
+  font-size: 30px;
+  border-radius: 10px;
+}
+
 
 * {
   box-sizing: border-box;
@@ -32,7 +41,7 @@ a:hover {
 
 .sideMenu {
   background: #0e536d;
-  width: 250px;
+  width: 300px;
   height: calc(100vh - 100px);
   padding: 10px 10px;
   color: #fae06e;
@@ -67,22 +76,15 @@ a:hover {
   }
 }
 .post {
-  background: #0e536d;
-  margin-right: 15px;
-  padding: 0 8px;
-  color: #fff;
-  font-size: 30px;
+  @include menu-icon();
 }
 .logout{
-  background: #0e536d;
-  margin-right: 15px;
-  padding: 0 8px;
-  color: #fff;
+  @include menu-icon();
 }
 
 .mainMenu {
   background: #fff5e0;
-  width: calc(100vw - 250px);
+  width: calc(100vw - 300px);
   height: calc(100vh - 100px);
   .category {
     color: #0e536d;

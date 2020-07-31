@@ -1,8 +1,9 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.new
+    @posts = Post.where(id: params[:id])
+    @post = Post.new
   end
-
+  
   def new
     @post = Post.new
   end

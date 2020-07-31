@@ -14,3 +14,7 @@
           %i.fas.fa-paper-plane
           .letter
             投稿
+      .post__new
+        - if @post.text.present?
+          = post.text
+        = image_tag @post.image.url, class: "post__image" if @post.image.present?
