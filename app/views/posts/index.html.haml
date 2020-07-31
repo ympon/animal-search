@@ -12,10 +12,9 @@
   .body
     .side-menu
       .post__btn__text
-        画像を投稿！
-      .side-menu__new
-        = link_to "posts/new", class: "post__btn" do
-          = icon('fas', 'camera')
+        画像を投稿！    
+      = link_to "posts/new", class: "post__btn" do
+        = icon('fas', 'camera')
       .post-new
         - @posts.each do |post|
           .post-new__text
@@ -24,6 +23,7 @@
             = post.created_at.strftime("%Y年%m月%d日 %H時%M分")
           .post-new__image
             = image_tag(post.image.to_s) if post.image?
+          = link_to "削除", post, method: :delete, class: "post-new__delete"
     .main-menu
       .search
         .search-form

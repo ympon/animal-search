@@ -11,11 +11,13 @@ class PostsController < ApplicationController
   def create
     @post = Post.create(post_params)
     @post.save!
-    redirect_to "/", notice: "投稿が完了しました！"
+    redirect_to "/"
   end
 
-  def show
-    @post = Post.new
+  def destroy
+    @posts = Post.find(params[:id])
+    @posts.destroy
+    redirect_back(fallback_location: post_path)
   end
 
   private
