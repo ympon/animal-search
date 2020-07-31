@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.where(id: params[:id])
+    @posts = Post.all.order("created_at DESC")
     @post = Post.new
   end
   
@@ -10,8 +10,8 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
-    @post.save
-    redirect_to "/", notice: "『#{@post.text}』を登録しました！"
+    @post.save!
+    redirect_to "/", notice: "投稿が完了しました！"
   end
 
   def show

@@ -39,28 +39,27 @@ a:hover {
   display: flex;
 }
 
-.sideMenu {
+.side-menu {
   background: #0e536d;
-  width: 300px;
+  width: 400px;
   height: calc(100vh - 100px);
   padding: 10px 10px;
   color: #fae06e;
   text-align: center;
+  overflow: scroll;
+  .post__btn__text{
+    font-family: 'Wawati SC',sans-serif;
+    font-size: 30px;  
+  }
   .post__btn{
     text-align: center;
     text-decoration: none;
     color: #fae06e;
-    font-size: 130px;
-    &__text{
-      font-family: 'Wawati SC',sans-serif;
-      font-size: 30px;
-      
-    }
+    font-size: 130px; 
   }
 }
 
-
-.mainTitle {
+.main-title {
   background: #fae06e;
   width: 100vw;
   height: 100px;
@@ -82,9 +81,9 @@ a:hover {
   @include menu-icon();
 }
 
-.mainMenu {
+.main-menu {
   background: #fff5e0;
-  width: calc(100vw - 300px);
+  width: calc(100vw - 400px);
   height: calc(100vh - 100px);
   .category {
     color: #0e536d;
