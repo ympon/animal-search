@@ -11,10 +11,11 @@
           = link_to "新規登録", "new_user_registration_path", class: "post"
   .body
     .side-menu
-      .post__btn__text
-        画像を投稿！    
-      = link_to "posts/new", class: "post__btn" do
-        = icon('fas', 'camera')
+      .side-menu__area
+        .post__btn__text
+          画像を投稿！    
+        = link_to "posts/new", class: "post__btn" do
+          = icon('fas', 'camera')
       .post-new
         - @posts.each do |post|
           .post-new__text
