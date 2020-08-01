@@ -9,5 +9,16 @@
     = javascript_include_tag 'application'
     %link{ :href => 'https://fonts.googleapis.com/css?family=Londrina+Shadow', rel: 'stylesheet' }
   %body
+    .menu
+      .header
+        .main-title
+          %a{ href: "/", class: "main-title__logo"} 
+            Animal Search
+          .user-management
+            - if user_signed_in?
+              = link_to "ログアウト", "destroy_user_session_path", class: "logout"
+            - else
+              = link_to "ログイン", "new_user_session_path", class: "post"
+              = link_to "新規登録", "new_user_registration_path", class: "post"
     = render 'layouts/notifications'
     = yield
