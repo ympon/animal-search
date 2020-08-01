@@ -18,6 +18,14 @@
   border-radius: 10px;
 }
 
+@mixin post-control() {
+  color: #0e536d;
+  background: #fae06e;
+  font-size: 20px;
+  margin-bottom: 8px;
+  padding: 5px 7px;
+}
+
 
 * {
   box-sizing: border-box;
@@ -97,11 +105,10 @@ a:hover {
     padding-bottom: 10px;
   }
   &__delete {
-    color: #0e536d;
-    background: #fae06e;
-    font-size: 20px;
-    margin-bottom: 8px;
-    padding: 5px 7px;
+    @include post-control();
+  }
+  &__edit {
+    @include post-control();
   }
 }
 
