@@ -104,6 +104,9 @@ a:hover {
   &__image {
     padding-bottom: 10px;
   }
+  &__details {
+    @include post-control();
+  }
   &__delete {
     @include post-control();
   }
