@@ -11,9 +11,9 @@ class PostsController < ApplicationController
   def create
     @post = Post.create(post_params)
     if @post.save
-      redirect_to "/", notice: "投稿を保存しました"
+      redirect_to "/", notice: "投稿を保存しました！"
     else
-      flash.now[:alert] = "画像と名前を入力してください"
+      flash.now[:alert] = "『画像』と『名前』を入力してください"
       render :new
     end
   end
