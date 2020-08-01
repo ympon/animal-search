@@ -45,6 +45,7 @@ a:hover {
 
 .body {
   display: flex;
+  overflow: scroll;
 }
 
 .main-title {
@@ -78,6 +79,9 @@ a:hover {
   color: #fae06e;
   text-align: center;
   overflow: scroll;
+  &__area {
+    border-bottom: dotted 3px rgba(255, 0, 0, 0.555);
+  }
   .post__btn__text{
     font-family: 'Wawati SC',sans-serif;
     font-size: 30px;  
@@ -87,6 +91,7 @@ a:hover {
     text-decoration: none;
     color: #fae06e;
     font-size: 130px; 
+    border-bottom: solid 2px #red;
   }
 }
 
@@ -95,7 +100,6 @@ a:hover {
     font-size: 27px;
     font-weight: bold;
     padding-top: 5px;
-    border-top: dotted 3px #fff5e0;
   }
   &__date {
     font-size: 15px;
@@ -103,6 +107,9 @@ a:hover {
   }
   &__image {
     padding-bottom: 10px;
+  }
+  &__details {
+    @include post-control();
   }
   &__delete {
     @include post-control();

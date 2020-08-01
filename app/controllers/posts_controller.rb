@@ -10,8 +10,12 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
-    @post.save!
-    redirect_to "/"
+    if @post.save
+      redirect_to "/", notice: "投稿を保存しました！"
+    else
+      flash.now[:alert] = "『画像』と『名前』を入力してください"
+      render :new
+    end
   end
 
   def destroy
@@ -28,6 +32,10 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.update(post_params)
     redirect_to "/"
+  end
+
+  def show
+    @post = Post.find(params[:id])
   end
 
   private

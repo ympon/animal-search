@@ -1,43 +1,21 @@
-* {
-  box-sizing: border-box;
-}
-
-a {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
+.logo-content {
+  font-size: 30px;
   color: #fae06e;
-  font-size: 40px;
-  font-weight: bold;
-  font-family:  'Londrina Shadow', cursive;
-}
-
-p {
-  font-size: 40px;
-  margin-bottom: 10px;
   font-weight: bold;
 }
 
-.send-area {
+.edit-area {
+  background:#fae06e;
+  box-sizing: border-box;
+  height: 100vh;
+  width: calc(100vw - 500px);
+  padding: 0 15px;
   display: flex;
   justify-content: center;
-  background: #0e536d;
-  .header {
-    margin-right: 10px;
-  }
-  .body {
-    background:#fae06e;
-    box-sizing: border-box;
-    height: 100vh;
-    width: calc(100vw - 500px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  align-items: center;
 }
 
-.form{
+.Form{
   width: 80%;
   color: #0e536d;
   &__contents{
@@ -49,7 +27,7 @@ p {
   &__inputContent {
     border: none;
     height: 50px;
-    width: 100%;
+    width: 80%;
     display: flex;
     padding-left: 20px;
   }
@@ -72,5 +50,28 @@ p {
     border-style: none;
     display: flex;
     cursor: pointer;
+    margin-bottom: 20px;
+  }
+}
+
+.Post-new {
+  color: #0e536d;
+  &__text {
+    font-size: 27px;
+    font-weight: bold;
+    padding-top: 5px;
+  }
+  &__date {
+    font-size: 15px;
+    padding-bottom: 3px;
+  }
+  &__image {
+    padding-bottom: 10px;
+  }
+  &__delete {
+    @include post-control();
+  }
+  &__edit {
+    @include post-control();
   }
 }
