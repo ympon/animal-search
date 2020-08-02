@@ -24,7 +24,7 @@ class PostsController < ApplicationController
   def destroy
     @posts = Post.find(params[:id])
     @posts.destroy
-    redirect_back(fallback_location: post_path)
+    redirect_to "/"
   end
 
   def edit
@@ -45,6 +45,10 @@ class PostsController < ApplicationController
   
   def post_params
     params.require(:post).permit(:image, :text).merge(user_id: current_user.id)
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
   end
 
   def move_to_index
