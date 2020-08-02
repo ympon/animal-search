@@ -1,3 +1,7 @@
+.field_with_errors {
+  display: contents;
+}
+
 h2 {
   font-family:  'Londrina Shadow', cursive;
   color: #0e536d;
@@ -23,6 +27,7 @@ h2 {
   padding: 20px 30px;
   border: 1px solid #ddd;
   border-radius: 2px;
+  font-size: 15px;
 }
 
 .field {

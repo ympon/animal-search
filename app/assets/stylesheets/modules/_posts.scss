@@ -69,6 +69,9 @@ a:hover {
 .logout{
   @include menu-icon();
 }
+.user__name {
+  color: #0e536d;
+}
 
 
 .side-menu {
