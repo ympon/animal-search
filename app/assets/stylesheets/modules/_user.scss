@@ -1,13 +1,37 @@
 h2 {
   font-family:  'Londrina Shadow', cursive;
   color: #0e536d;
-  font-size: 30px;
+  font-size: 60px;
+  font-weight: bold;
   margin: 20px;
 }
 
+.contents-row {
+  width: 980px;
+  margin: 60px auto;
+  padding: 60px;
+  background-color: #fae06e;
+  border-radius: 5px;
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+#error_explanation {
+  margin: 20px 0;
+  padding: 20px 30px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+}
+
 .field {
-  height: 50px;
+  height: 60px;
   margin: 10px 20px;
+}
+
+input {
+  width: 200px;
 }
 
 .sign-btn {
@@ -17,4 +41,5 @@ h2 {
   background-color: #0e536d;
   color: white;
   margin: 10px 20px;
+  cursor: pointer;
 }
