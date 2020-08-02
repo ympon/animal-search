@@ -1,9 +1,6 @@
 .send-area
-  .header
-    %a{ href: "/", class: "title__logo"} 
-      Animal Search
-    .logo-content
-      詳細
+  .logo-content
+    詳細
   .edit-area
     .Post-new
       .Post-new__text
@@ -12,4 +9,5 @@
         = @post.created_at.strftime("%Y年%m月%d日 %H時%M分")
       .Post-new__image
         = image_tag(@post.image.to_s) if @post.image?
-      = link_to "編集", edit_post_path(@post.id), method: :get, class: "Post-new__edit"
+      - if user_signed_in?
+        = link_to "編集", edit_post_path(@post.id), method: :get, class: "Post-new__edit"
