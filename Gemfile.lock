@@ -270,7 +270,7 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.2)
   mini_magick
-  pg (>= 0.18, < 2.0)
+  pg
   pry-rails
   puma (~> 4.1)
   rails (~> 6.0.0)
