@@ -15,7 +15,7 @@
           = post.created_at.strftime("%Y年%m月%d日 %H時%M分")
         .post-new__image
           = image_tag(post.image.to_s) if post.image?
-        = link_to '詳細', post_path(post.id), method: :get, class: "post-new__details" 
+          = link_to '詳細', post_path(post.id), method: :get, class: "post-new__details" 
         - if user_signed_in?
           = link_to "削除", post, method: :delete, class: "post-new__delete"
           = link_to "編集", edit_post_path(post.id), method: :get, class: "post-new__edit"
