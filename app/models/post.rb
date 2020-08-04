@@ -6,4 +6,12 @@ class Post < ApplicationRecord
   validates :text, presence: true, unless: :image?
   validates :image, presence: true,unless: :text?
   mount_uploader :image, ImageUploader
+
+  def self.search(search)
+    if search
+      Post.where("text LIKE(?)", "%#{search}%")
+    else
+      Post.all
+    end
+  end
 end

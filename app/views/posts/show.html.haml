@@ -10,4 +10,5 @@
       .Post-new__image
         = image_tag(@post.image.to_s) if @post.image?
       - if user_signed_in?
+        = link_to "削除", @post, method: :delete, class: "Post-new__delete"
         = link_to "編集", edit_post_path(@post.id), method: :get, class: "Post-new__edit"

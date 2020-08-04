@@ -5,6 +5,10 @@ Rails.application.routes.draw do
     get "/users/sign_up" => "devise/registrations#new"
   end
   root "posts#index"
-  resources :posts
+  resources :posts do
+    collection do
+      get 'search'
+    end
+  end
   resources :users, only: [:new, :show, :create]
 end

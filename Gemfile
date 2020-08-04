@@ -60,6 +60,6 @@ gem 'ancestry'
 gem 'jquery-rails'
 gem 'devise'
 
-group :production do
+group :production, :development do
   gem 'pg'
 end
