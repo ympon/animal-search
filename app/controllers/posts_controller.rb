@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   # before_action :move_to_index, except: [:index, :show, :search]
 
   def index
-    @posts = Post.includes(:user).order("created_at DESC")
+    @posts = Post.includes(:user).limit(10).order("created_at DESC")
     @post = Post.new
   end
   
@@ -11,6 +11,7 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  
   def create
     @post = Post.create(post_params)
     if @post.save
@@ -48,7 +49,7 @@ class PostsController < ApplicationController
   private
   
   def post_params
-    params.require(:post).permit(:image, :text).merge(user_id: current_user.id)
+    params.require(:post).permit(:image, :text, :category_id).merge(user_id: current_user.id)
   end
 
   def set_post

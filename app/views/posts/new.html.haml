@@ -8,6 +8,10 @@
         = f.label :image, class: 'form__inputImage' do
           = icon('far', 'image', class: 'form__icon')
           = f.file_field :image, class: 'hidden'
+        .showCategory
+          .showCategory__detail
+            %h5 分類を選択する
+            =f.collection_select(:category_id, Category.all, :id, :name,{prompt: "---"},{class: "categoryChoiceList"})
         %button{type: "submit", class:'form__submit'}   
           %i.fas.fa-paper-plane
           .letter

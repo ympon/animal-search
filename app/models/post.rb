@@ -1,8 +1,11 @@
 class Post < ApplicationRecord
-  belongs_to :user
-  has_many :posts_categories, dependent: :destroy
-  has_many :categories, through: :posts_categories
+  extend ActiveHash::Associations::ActiveRecordExtensions
+    belongs_to_active_hash :category
+  
 
+  belongs_to :user,foreign_key: "user_id"
+
+  validates :category_id, presence: true
   validates :text, presence: true, unless: :image?
   validates :image, presence: true,unless: :text?
   mount_uploader :image, ImageUploader
