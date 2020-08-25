@@ -1,0 +1,24 @@
+.Form {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Form__inputContent__edit {
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+}
+
+.showCategory__edit {
+  justify-content: center;
+  &__detail {
+    margin: 10px 0 40px 0;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+.categoryChoiceList__edit {
+  width: 150px;
+  height: 35px;
+}

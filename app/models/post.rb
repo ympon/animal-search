@@ -12,9 +12,16 @@ class Post < ApplicationRecord
 
   def self.search(search)
     if search
-      Post.where("text LIKE(?)", "%#{search}%")
+      Post.where("text LIKE(?)", "#{search}")
     else
       Post.all
     end
   end
+  def self.category(category_id)
+    if search
+      Post.where(category_id: category_id)
+    else
+      Post.all
+    end
+    end
 end

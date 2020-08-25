@@ -40,6 +40,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @posts = Post.where(category_id: params[:category_id])
   end
 
   def search

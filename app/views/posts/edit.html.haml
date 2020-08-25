@@ -12,11 +12,15 @@
         = image_tag(@post.image.to_s) if @post.image?
     = form_with model: @post, class: "Form",local: true do |f|
       .Form__contents
-        = f.text_field :text, class: "Form__inputContent", placeholder: "生き物の名前を入力(空欄不可)"
+        = f.text_field :text, class: "Form__inputContent__edit", placeholder: "生き物の名前(空欄不可)"
         = f.label :image, class: "Form__inputImage" do
           = icon("far", "image", class: "Form__icon")
           = f.file_field :image, class: "hidden"
-        %button{type: "submit", class:"Form__submit", href: "/"}   
-          %i.fas.fa-paper-plane
-          .letter
-            投稿
+      .showCategory__edit
+        .showCategory__edit__detail
+          %h5 分類を選択する
+          = f.collection_select(:category_id, Category.all, :id, :name, {include_blank: "選択してください"}, {class: "categoryChoiceList__edit"})
+      %button{type: "submit", class:"Form__submit", href: "/"}   
+        %i.fas.fa-paper-plane
+        .letter
+          投稿

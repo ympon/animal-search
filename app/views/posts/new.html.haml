@@ -4,7 +4,7 @@
       .form__contents
         %p 新規投稿
         生き物の名前がわからない時は『教えて！』と入力しよう
-        = f.text_field :text, class: 'form__inputContent', placeholder: "生き物の名前を入力(空欄不可)"
+        = f.text_field :text, class: 'form__inputContent', placeholder: "生き物の名前(空欄不可)"
         = f.label :image, class: 'form__inputImage' do
           = icon('far', 'image', class: 'form__icon')
           = f.file_field :image, class: 'hidden'
