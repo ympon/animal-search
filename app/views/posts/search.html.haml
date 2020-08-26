@@ -1,23 +1,18 @@
-.body
-  .side-menu
-    .side-menu__area
-      .post__btn__text
-        画像を投稿！    
-      = link_to "posts/new", class: "post__btn" do
-        = icon('fas', 'camera')
-    .post-new
-  .main-menu
-    .search
-      = form_with class: "search-form", url: search_posts_path, local: true do |f|
-        = f.text_field :keyword, class: 'search-input', placeholder: "投稿を検索する"
-        = f.submit "Search", class: "search-btn"
-    .search__result
-      - @posts.each do |post|
-        .post-new__text
-          = post.text
-        - if user_signed_in?
-          .post-new__date
-            = post.created_at.strftime("%Y年%m月%d日 %H時%M分")
-          .post-new__image
-            = image_tag(post.image.to_s) if post.image?
-          = link_to '詳細', post_path(post.id), method: :get, class: "post-new__details" 
+.search__result
+  - @posts.each do |post|
+    .search__result__box
+      .post-new__text
+        = post.text
+      .post-new__upper
+        .post-new__upper__category
+          = post.category[:name]
+        .post-new__upper__area
+          = post.area[:name]
+      .post-new__lower
+        .post-new__lower__date
+          = post.created_at.strftime("%Y年%m月%d日%H時%M分")
+        .post-new__lower__user
+          = post.user[:name]
+      .post-new__image
+        = image_tag(post.image.to_s) if post.image?
+      = link_to '詳細', post_path(post.id), method: :get, class: "post-new__details" 

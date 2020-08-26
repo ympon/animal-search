@@ -1,58 +1,62 @@
 .body
   .side-menu
     .side-menu__area
-      .post__btn__text
-        画像を投稿！    
-      = link_to "posts/new", class: "post__btn" do
-        = icon('fas', 'camera')
-    .post-new
-      - @posts.each do |post|
+      新規投稿一覧
+    - @posts.each do |post|
+      .post-new 
         .post-new__text
           = post.text
-        - if user_signed_in?
-          .post-new__date
-            = post.created_at.strftime("%Y年%m月%d日 %H時%M分")
-          .post-new__image
-            = image_tag(post.image.to_s) if post.image?
-          = link_to '詳細', post_path(post.id), method: :get, class: "post-new__details" 
-          - if user_signed_in?
-            = link_to "削除", post, method: :delete, class: "post-new__delete"
-            = link_to "編集", edit_post_path(post.id), method: :get, class: "post-new__edit"
+        .post-new__upper
+          .post-new__upper__category
+            = post.category[:name]
+          .post-new__upper__area
+            = post.area[:name]
+        .post-new__lower
+          .post-new__lower__date
+            = post.created_at.strftime("%Y年%m月%d日%H時%M分")
+          .post-new__lower__user
+            = post.user[:name]
+        .post-new__image
+          = image_tag(post.image.to_s) if post.image?
+        = link_to '詳細', post_path(post.id), method: :get, class: "post-new__details" 
+        - if user_signed_in? && (current_user.id == @post.user_id)
+          = link_to "削除", post, method: :delete, class: "post-new__delete"
+          = link_to "編集", edit_post_path(post.id), method: :get, class: "post-new__edit"
   .main-menu
     .search
       = form_with class: "search-form", url: search_posts_path, method: :get, local: true do |f|
-        = f.text_field :keyword, class: 'search-input', placeholder: "投稿を検索する"
+        = f.text_field :keyword, class: 'search-input', placeholder: "投稿を検索 ( 教えて！ と検索して名前を教えてあげよう )"
         = f.submit "Search", class: "search-btn"
     .category
       .category-upper
         .category-upper__bugs
-          = link_to "#", class: "category-upper__bugs__icon" do
+          = link_to categories_path(category_id: 0), class: "category-upper__bugs__icon" do
             = icon('fas', 'bug')
           .category-upper__bugs__text
             虫
         .category-upper__fish
-          = link_to "#", class: "category-upper__fish__icon" do
-            = icon('fas', 'fish')  
+          = link_to categories_path(category_id: 1),class: "category-upper__fish__icon" do
+            = icon('fas', 'fish')
           .category-upper__fish__text
             魚介類
         .category-upper__birds
-          = link_to "#", class: "category-upper__birds__icon" do
+          = link_to categories_path(category_id: 2), class: "category-upper__birds__icon" do
             = icon('fas', 'kiwi-bird')
           .category-upper__birds__text
             鳥類
       .category-row
         .category-row__amphibian
-          = link_to "#", class: "category-row__amphibian__icon" do
+          = link_to categories_path(category_id: 3), class: "category-row__amphibian__icon" do
             = icon('fas', 'frog')
           .category-row__amphibian__text
             両生類
         .category-row__reptiles
-          = link_to "#", class: "category-row__reptiles__icon" do
+          = link_to categories_path(category_id: 4), class: "category-row__reptiles__icon" do
             = icon('fas', 'otter')
           .category-row__reptiles__text
             は虫類
         .category-row__mammalian
-          = link_to "#", class: "category-row__mammalian__icon" do
+          = link_to categories_path(category_id: 5), class: "category-row__mammalian__icon" do
             = icon('fas', 'paw')
           .category-row__mammalian__text
             ほ乳類

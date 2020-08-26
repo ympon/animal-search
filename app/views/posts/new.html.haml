@@ -4,10 +4,18 @@
       .form__contents
         %p 新規投稿
         生き物の名前がわからない時は『教えて！』と入力しよう
-        = f.text_field :text, class: 'form__inputContent', placeholder: "生き物の名前を入力(空欄不可)"
+        = f.text_field :text, class: 'form__inputContent', placeholder: "生き物の名前(空欄不可)"
         = f.label :image, class: 'form__inputImage' do
           = icon('far', 'image', class: 'form__icon')
           = f.file_field :image, class: 'hidden'
+        .showCategory
+          .showCategory__detail
+            %h5 分類を選択する
+            =f.collection_select(:category_id, Category.all, :id, :name,{prompt: "---"},{class: "categoryChoiceList"})
+        .showArea
+          .showArea__detail
+            %h5 撮影地域を選択する
+            =f.collection_select(:area_id, Area.all, :id, :name,{prompt: "---"},{class: "areaChoiceList"})
         %button{type: "submit", class:'form__submit'}   
           %i.fas.fa-paper-plane
           .letter

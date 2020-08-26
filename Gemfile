@@ -59,6 +59,7 @@ gem 'mini_magick'
 gem 'ancestry'
 gem 'jquery-rails'
 gem 'devise'
+gem 'active_hash'
 
 group :production, :development do
   gem 'pg'

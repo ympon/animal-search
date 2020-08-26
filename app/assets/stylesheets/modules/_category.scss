@@ -1,0 +1,52 @@
+.classificationArea {
+  text-align: center;
+  .classificationName {
+    font-size: 30px;
+    color: $blueColor;
+    font-weight: bold;
+  }
+  .post-new__classification {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    color: $blueColor;
+    overflow: scroll;
+    &__box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 5px;
+    }
+    &__text {
+      font-size: 27px;
+      font-weight: bold;
+      padding-top: 5px;
+    }
+    .classification__upper {
+      display: inline-flex;
+      padding-top: 5px;
+      .post-new__classification__category {
+        padding-right: 15px;
+      }
+    }
+    .classification__lower {
+      display: inline-flex;
+      padding: 5px 0;
+      .post-new__classification__date {
+      padding-right: 15px;
+      }
+    }
+    &__image {
+      padding-bottom: 10px;
+    }
+    &__details {
+      @include post-control();
+    }
+    &__delete {
+      @include post-control();
+    }
+    &__edit {
+      @include post-control();
+    }
+  }
+}

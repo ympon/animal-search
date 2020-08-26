@@ -11,4 +11,6 @@ Rails.application.routes.draw do
     end
   end
   resources :users, only: [:new, :show, :create]
+  resources :categories, only: [:show, :index]
+  resources :areas, only: [:show, :index]
 end
