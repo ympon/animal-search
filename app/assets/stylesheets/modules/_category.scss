@@ -1,7 +1,5 @@
 .classificationArea {
   text-align: center;
-  // display: flex;
-
   .classificationName {
     font-size: 30px;
     color: #0e536d;
@@ -9,7 +7,6 @@
   }
   .post-new__classification {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: row;
     color: #0e536d;
@@ -18,7 +15,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 20px;
+      padding: 20px 5px;
     }
     &__text {
       font-size: 27px;

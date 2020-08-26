@@ -1,7 +1,7 @@
 .body
   .side-menu
     .side-menu__area
-      新規投稿
+      新規投稿一覧
     - @posts.each do |post|
       .post-new 
         .post-new__text
@@ -25,7 +25,7 @@
   .main-menu
     .search
       = form_with class: "search-form", url: search_posts_path, method: :get, local: true do |f|
-        = f.text_field :keyword, class: 'search-input', placeholder: "投稿を検索する"
+        = f.text_field :keyword, class: 'search-input', placeholder: "投稿を検索 ( 教えて！ と検索して名前を教えてあげよう )"
         = f.submit "Search", class: "search-btn"
     .category
       .category-upper

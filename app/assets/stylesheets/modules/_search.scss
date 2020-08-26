@@ -25,13 +25,16 @@ padding: 10px 20px;
   color: #fff;
 }
 
-.main-menu {
+.search__main {
   overflow: scroll;
 }
 
 .search__result {
+  text-align: center;
   color: #0e536d;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  overflow: scroll;
+  &__box {
+    padding: 20px 5px;
+  }
 }
