@@ -7,12 +7,14 @@
         = @post.text if @post.text?
       .post-new__category
         = @post.category[:name]
-        .post-new__area
-          = @post.area[:name]
+      .post-new__area
+        = @post.area[:name]
       .Post-new__date
         = @post.created_at.strftime("%Y年%m月%d日 %H時%M分")
+      .Post-new__user
+        = @post.user[:name]
       .Post-new__image
         = image_tag(@post.image.to_s) if @post.image?
-      - if user_signed_in?
+      - if user_signed_in? && (current_user.id == @post.user_id)
         = link_to "削除", @post, method: :delete, class: "Post-new__delete"
         = link_to "編集", edit_post_path(@post.id), method: :get, class: "Post-new__edit"

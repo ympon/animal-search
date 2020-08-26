@@ -5,23 +5,26 @@
         画像を投稿！    
       = link_to "posts/new", class: "post__btn" do
         = icon('fas', 'camera')
-    .post-new
-      - @posts.each do |post|
+    - @posts.each do |post|
+      .post-new 
         .post-new__text
           = post.text
-        .post-new__category
-          = post.category[:name]
-        .post-new__area
-          = post.area[:name]
-        - if user_signed_in?
-          .post-new__date
-            = post.created_at.strftime("%Y年%m月%d日 %H時%M分")
-          .post-new__image
-            = image_tag(post.image.to_s) if post.image?
-          = link_to '詳細', post_path(post.id), method: :get, class: "post-new__details" 
-          - if user_signed_in?
-            = link_to "削除", post, method: :delete, class: "post-new__delete"
-            = link_to "編集", edit_post_path(post.id), method: :get, class: "post-new__edit"
+        .post-new__upper
+          .post-new__upper__category
+            = post.category[:name]
+          .post-new__upper__area
+            = post.area[:name]
+        .post-new__lower
+          .post-new__lower__date
+            = post.created_at.strftime("%Y年%m月%d日%H時%M分")
+          .post-new__lower__user
+            = post.user[:name]
+        .post-new__image
+          = image_tag(post.image.to_s) if post.image?
+        = link_to '詳細', post_path(post.id), method: :get, class: "post-new__details" 
+        - if user_signed_in? && (current_user.id == @post.user_id)
+          = link_to "削除", post, method: :delete, class: "post-new__delete"
+          = link_to "編集", edit_post_path(post.id), method: :get, class: "post-new__edit"
   .main-menu
     .search
       = form_with class: "search-form", url: search_posts_path, method: :get, local: true do |f|

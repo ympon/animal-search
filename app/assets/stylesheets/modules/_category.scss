@@ -1,0 +1,35 @@
+.classificationArea {
+  text-align: center;
+  .classificationName {
+    font-size: 30px;
+    color: #0e536d;
+    font-weight: bold;
+  }
+  .post-new__classification {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    // overflow: scroll;
+    &__text {
+      font-size: 27px;
+      font-weight: bold;
+      padding-top: 5px;
+    }
+    &__date {
+      font-size: 15px;
+      padding-bottom: 3px;
+    }
+    &__image {
+      padding-bottom: 10px;
+    }
+    &__details {
+      @include post-control();
+    }
+    &__delete {
+      @include post-control();
+    }
+    &__edit {
+      @include post-control();
+    }
+  }
+}
