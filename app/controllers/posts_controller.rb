@@ -17,7 +17,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to "/", notice: "投稿を保存しました！"
     else
-      flash.now[:alert] = "『画像』と『名前』を入力してください"
+      flash.now[:alert] = "投稿に失敗しました"
       render :new
     end
   end
@@ -25,7 +25,7 @@ class PostsController < ApplicationController
   def destroy
     @posts = Post.find(params[:id])
     @posts.destroy
-    redirect_to "/"
+    redirect_to "/", notice: "投稿を削除しました！"
   end
 
   def edit
@@ -50,7 +50,7 @@ class PostsController < ApplicationController
   private
   
   def post_params
-    params.require(:post).permit(:image, :text, :category_id).merge(user_id: current_user.id)
+    params.require(:post).permit(:image, :text, :category_id, :area_id).merge(user_id: current_user.id)
   end
 
   def set_post

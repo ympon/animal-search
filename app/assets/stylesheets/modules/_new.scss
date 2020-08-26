@@ -89,5 +89,23 @@ p {
   .categoryChoiceList {
     width: 150px;
     height: 35px;
+    padding-left: 5px;
+    color: #0e536d;
+    border: none;
+  }
+}
+.showArea {
+  justify-content: center;
+  &__detail {
+    margin: 10px 0 25px 0;
+    font-size: 20px;
+    text-align: center;
+  }
+  .areaChoiceList {
+    width: 150px;
+    height: 35px;
+    padding-left: 5px;
+    color: #0e536d;
+    border: none;
   }
 }

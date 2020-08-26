@@ -4,7 +4,6 @@ class CreateCategories < ActiveRecord::Migration[6.0]
       t.string :name, null: false
       t.timestamps
     end
-    add_index :categories
-  end
-  
+    # add_index :categories
+  end 
 end

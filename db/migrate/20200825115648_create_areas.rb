@@ -4,6 +4,6 @@ class CreateAreas < ActiveRecord::Migration[6.0]
       t.string :name, null: false
       t.timestamps
     end
-    add_index :areas
+    # add_index :areas
   end
 end
