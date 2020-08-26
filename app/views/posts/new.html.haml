@@ -14,7 +14,7 @@
             =f.collection_select(:category_id, Category.all, :id, :name,{prompt: "---"},{class: "categoryChoiceList"})
         .showArea
           .showArea__detail
-            %h5 地域を選択する
+            %h5 撮影地域を選択する
             =f.collection_select(:area_id, Area.all, :id, :name,{prompt: "---"},{class: "areaChoiceList"})
         %button{type: "submit", class:'form__submit'}   
           %i.fas.fa-paper-plane

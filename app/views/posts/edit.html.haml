@@ -22,7 +22,7 @@
           = f.collection_select(:category_id, Category.all, :id, :name, {include_blank: "選択してください"}, {class: "categoryChoiceList__edit"})
       .showArea__edit
         .showArea__edit__detail
-          %h5 分類を選択する
+          %h5 撮影地域を選択する
           = f.collection_select(:area_id, Area.all, :id, :name, {include_blank: "選択してください"}, {class: "areaChoiceList__edit"})
       %button{type: "submit", class:"Form__submit", href: "/"}   
         %i.fas.fa-paper-plane
