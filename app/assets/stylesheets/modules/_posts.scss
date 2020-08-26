@@ -2,7 +2,7 @@
   text-align: center;
   &__icon {
     font-size: 140px;
-    color: #f6b7aa ;
+    color: $pinkColor;
   }
   &__text {
     font-size: 35px;
@@ -10,7 +10,7 @@
 }
 
 @mixin menu-icon() {
-  background: #0e536d;
+  background: $blueColor;
   margin-right: 15px;
   padding: 7px 8px;
   color: #fff;
@@ -19,8 +19,8 @@
 }
 
 @mixin post-control() {
-  color: #0e536d;
-  background: #fae06e;
+  color: $blueColor;
+  background: $yellowColor;
   font-size: 20px;
   margin-bottom: 8px;
   padding: 5px 7px;
@@ -49,14 +49,14 @@ a:hover {
 }
 
 .main-title {
-  background: #fae06e;
+  background: $yellowColor;
   width: 100vw;
   height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   &__logo {
-    color: #0e536d;
+    color: $blueColor;
     padding-left: 30px;
     font-size: 50px;
     font-weight: bold;
@@ -66,12 +66,12 @@ a:hover {
     display: flex;
     .post__btn__text{
       font-size: 20px;
-      color: #0e536d; 
+      color: $blueColor; 
     }
     .post__btn{
       text-align: center;
       text-decoration: none;
-      color: #0e536d;
+      color: $blueColor;
       font-size: 50px; 
       padding-right: 50px;
     }
@@ -84,23 +84,23 @@ a:hover {
   @include menu-icon();
 }
 .user__name {
-  color: #0e536d;
+  color: $blueColor;
 }
 
 
 .side-menu {
-  background: #0e536d;
+  background: $blueColor;
   width: 400px;
   height: calc(100vh - 100px);
   padding-top: 10px;
-  color: #fae06e;
+  color: $yellowColor;
   text-align: center;
   overflow: scroll;
   &__area {
     font-size: 30px;
     font-weight: bold;
-    color: #f6b7aa;
-    border-bottom: dotted 3px #f6b7aa;
+    color: $pinkColor;
+    border-bottom: dotted 3px $pinkColor;
     padding: 8px 0;
   }
 }
@@ -148,7 +148,7 @@ a:hover {
   width: calc(100vw - 400px);
   height: calc(100vh - 100px);
   .category {
-    color: #0e536d;
+    color: $blueColor;
     padding: 30px 30px 0 30px;
     font-family: 'Wawati SC',sans-serif;
     .category-upper {

@@ -9,7 +9,7 @@ padding: 10px 20px;
   height: 60px;
   width: 100%;
   padding: 0 30px;
-  box-shadow: 1px 1px 2px #999999;
+  box-shadow: 1px 1px 2px #999;
   border-style: none;
   margin-bottom: 20px;
 }
@@ -19,9 +19,9 @@ padding: 10px 20px;
   width: 110px;
   margin-left: 10px;
   border-style: none;
-  box-shadow: 1px 1px 2px #999999;
+  box-shadow: 1px 1px 2px #999;
   cursor: pointer;
-  background: #0e536d;
+  background: $blueColor;
   color: #fff;
 }
 
@@ -31,7 +31,7 @@ padding: 10px 20px;
 
 .search__result {
   text-align: center;
-  color: #0e536d;
+  color: $blueColor;
   display: flex;
   overflow: scroll;
   &__box {

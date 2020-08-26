@@ -1,12 +1,12 @@
 .logo-content {
   font-size: 30px;
-  color: #fae06e;
+  color: $yellowColor;
   font-weight: bold;
   padding-right: 10px;
 }
 
 .edit-area {
-  background:#fae06e;
+  background:$yellowColor;
   box-sizing: border-box;
   height: 100vh;
   width: calc(100vw - 500px);
@@ -18,7 +18,7 @@
 
 .Form{
   width: 80%;
-  color: #0e536d;
+  color: $blueColor;
   &__contents{
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@
     padding-left: 20px;
   }
   &__inputImage {
-    color: #0e536d;
+    color: $blueColor;
     font-size: 100px;
     cursor: pointer;
   }
@@ -45,9 +45,9 @@
     height: 60px;
     width: 100px;
     padding: 0 30px;
-    background: #0e536d;
+    background: $blueColor;
     color: white;
-    box-shadow: 1px 1px 2px #999999;
+    box-shadow: 1px 1px 2px #999;
     border-style: none;
     display: flex;
     cursor: pointer;
@@ -56,15 +56,15 @@
 }
 
 .post-new__show {
-  color: #0e536d;
+  color: $blueColor;
   text-align: center;
 }
 .Post-new__delete {
-  color: #0e536d;
+  color: $blueColor;
   font-size: 25px;
 }
 .Post-new__edit {
-  color: #0e536d;
+  color: $blueColor;
   font-size: 25px;
 }
 .post-new__upper {

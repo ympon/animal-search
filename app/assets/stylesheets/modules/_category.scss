@@ -2,14 +2,14 @@
   text-align: center;
   .classificationName {
     font-size: 30px;
-    color: #0e536d;
+    color: $blueColor;
     font-weight: bold;
   }
   .post-new__classification {
     display: flex;
     align-items: center;
     flex-direction: row;
-    color: #0e536d;
+    color: $blueColor;
     overflow: scroll;
     &__box {
       display: flex;
