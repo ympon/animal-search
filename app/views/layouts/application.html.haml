@@ -16,8 +16,13 @@
             Animal Search
           .user-management
             - if user_signed_in?
-              .user__name
-                = current_user.name
+              .post__btn__text
+                画像を投稿
+                = icon('far', 'hand-point-right')
+                = link_to "posts/new", class: "post__btn" do
+                  = icon('fas', 'camera')
+              -# .user__name
+              -#   = current_user.name
               = link_to "ログアウト", "/users/sign_out", class: "logout", method: :delete 
             - else
               = link_to "ログイン", "/users/sign_in", class: "post" 

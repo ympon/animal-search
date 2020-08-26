@@ -1,5 +1,7 @@
 .classificationArea {
   text-align: center;
+  // display: flex;
+
   .classificationName {
     font-size: 30px;
     color: #0e536d;
@@ -8,16 +10,34 @@
   .post-new__classification {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: row;
-    // overflow: scroll;
+    color: #0e536d;
+    overflow: scroll;
+    &__box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
     &__text {
       font-size: 27px;
       font-weight: bold;
       padding-top: 5px;
     }
-    &__date {
-      font-size: 15px;
-      padding-bottom: 3px;
+    .classification__upper {
+      display: inline-flex;
+      padding-top: 5px;
+      .post-new__classification__category {
+        padding-right: 15px;
+      }
+    }
+    .classification__lower {
+      display: inline-flex;
+      padding: 5px 0;
+      .post-new__classification__date {
+      padding-right: 15px;
+      }
     }
     &__image {
       padding-bottom: 10px;

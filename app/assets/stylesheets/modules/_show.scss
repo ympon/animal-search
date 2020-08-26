@@ -55,24 +55,23 @@
   }
 }
 
-.Post-new {
+.post-new__show {
   color: #0e536d;
-  &__text {
-    font-size: 27px;
-    font-weight: bold;
-    padding-top: 5px;
-  }
-  &__date {
-    font-size: 15px;
-    padding-bottom: 3px;
-  }
-  &__image {
-    padding-bottom: 10px;
-  }
-  &__delete {
-    @include post-control();
-  }
-  &__edit {
-    @include post-control();
-  }
+  text-align: center;
+}
+.Post-new__delete {
+  color: #0e536d;
+  font-size: 25px;
+}
+.Post-new__edit {
+  color: #0e536d;
+  font-size: 25px;
+}
+.post-new__upper {
+  display: flex;
+  justify-content: center;
+}
+.post-new__lower {
+  display: flex;
+  justify-content: center;
 }

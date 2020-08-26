@@ -1,10 +1,7 @@
 .body
   .side-menu
     .side-menu__area
-      .post__btn__text
-        画像を投稿！    
-      = link_to "posts/new", class: "post__btn" do
-        = icon('fas', 'camera')
+      新規投稿
     - @posts.each do |post|
       .post-new 
         .post-new__text
