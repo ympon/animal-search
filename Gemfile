@@ -61,6 +61,5 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'active_hash'
 gem 'fog-aws'
-group :production do
+
   gem 'pg'
-end
