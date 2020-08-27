@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show]
 
   def new
     @users = User.all
@@ -7,6 +6,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @posts = current_user.posts.order("created_at DESC")
   end
 
   def create
@@ -22,10 +22,6 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:nickname, :email, :password, :password_confirmation)
-  end
-
-  def set_user
-    @user = User.find([:id])
   end
 
 end
