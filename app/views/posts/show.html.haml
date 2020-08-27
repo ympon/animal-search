@@ -1,7 +1,7 @@
 .send-area
   .logo-content
     詳細
-  .edit-area
+  .show-area
     .post-new__show
       .post-new__text
         = @post.text if @post.text?
@@ -20,3 +20,20 @@
       - if user_signed_in? && (current_user.id == @post.user_id)
         = link_to "削除", @post, method: :delete, class: "Post-new__delete"
         = link_to "編集", edit_post_path(@post.id), method: :get, class: "Post-new__edit"
+      .comment
+        - if user_signed_in?
+          = form_with(model: [@post, @comment], local: true, id: "new-comment") do |form| 
+            = form.text_area :text, placeholder: "コメントを入力する(最大40文字)", rows: "2", maxlength: "40", class: "comment__box"
+            = form.submit "コメントする", class: "comment__btn"
+      .comments
+        %h6.comments__title
+          = icon("fas", "comment-dots")
+          コメント一覧
+        .comments__text
+          - if @comments
+            - @comments.each do |comment|
+              .comments__text__name
+                = comment.user.name
+                = icon("fas", "hand-point-down")
+              .comments__text__post
+                = comment.text

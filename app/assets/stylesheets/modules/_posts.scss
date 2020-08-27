@@ -64,6 +64,10 @@ a:hover {
   }
   .user-management {
     display: flex;
+    .post__user__name {
+      padding: 30px 20px 0 0;
+      color: $blueColor; 
+    }
     .post__btn__text{
       font-size: 20px;
       color: $blueColor; 

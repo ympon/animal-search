@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  # before_action :set_post, only: [:edit, :show]
-  # before_action :move_to_index, except: [:index, :show, :search]
+  before_action :set_post, only: [:edit, :show]
+  before_action :move_to_index, except: [:index, :show, :search]
 
   def index
     @posts = Post.includes(:user).limit(10).order("created_at DESC")
@@ -41,6 +41,8 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @posts = Post.where(category_id: params[:category_id])
+    @comment = Comment.new
+    @comments = @post.comments.includes(:user)
   end
 
   def search

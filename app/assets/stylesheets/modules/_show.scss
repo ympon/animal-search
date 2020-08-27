@@ -5,15 +5,16 @@
   padding-right: 10px;
 }
 
-.edit-area {
+
+.show-area {
   background:$yellowColor;
   box-sizing: border-box;
-  height: 100vh;
   width: calc(100vw - 500px);
-  padding: 0 15px;
+  padding: 20px 15px;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: scroll;
 }
 
 .Form{
@@ -60,12 +61,16 @@
   text-align: center;
 }
 .Post-new__delete {
-  color: $blueColor;
+  background: $blueColor;
+  color: lightgray;
   font-size: 25px;
+  padding: 5px;
 }
 .Post-new__edit {
-  color: $blueColor;
+  background: $blueColor;
+  color: lightgray;
   font-size: 25px;
+  padding: 5px;
 }
 .post-new__upper {
   display: flex;
@@ -74,4 +79,46 @@
 .post-new__lower {
   display: flex;
   justify-content: center;
+}
+
+#new-comment {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.comment {
+  margin-top: 20px;  
+  &__box {
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    width: 350px;
+    padding: 10px;
+  }
+  &__btn {
+    background: $blueColor;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 350px;
+    cursor: pointer;
+  }
+}
+.comments {
+  margin: 20px 0;
+  &__title {
+    font-weight: bold;
+    font-size: 25px;
+    padding-top: 10px;
+  }
+  &__text {
+    &__name {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
 }
