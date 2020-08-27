@@ -1,9 +1,8 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:edit, :show]
   before_action :move_to_index, except: [:index, :show, :search]
 
   def index
-    @posts = Post.includes(:user).limit(10).order("created_at DESC")
+    @posts = Post.includes(:user).order("created_at DESC")
     @post = Post.new
   end
   
@@ -53,10 +52,6 @@ class PostsController < ApplicationController
   
   def post_params
     params.require(:post).permit(:image, :text, :category_id, :area_id).merge(user_id: current_user.id)
-  end
-
-  def set_post
-    @post = Post.find(params[:id])
   end
 
   def move_to_index
