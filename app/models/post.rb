@@ -13,8 +13,8 @@ class Post < ApplicationRecord
   mount_uploader :image, ImageUploader
 
   def self.search(search)
-    if search
-      Post.where("text LIKE(?)", "#{search}")
+    if search != ""
+      Post.where(['text LIKE(?)', "%#{search}%"])
     else
       Post.all
     end
