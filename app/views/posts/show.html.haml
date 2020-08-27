@@ -25,9 +25,6 @@
           = form_with(model: [@post, @comment], local: true, id: "new-comment") do |form| 
             = form.text_area :text, placeholder: "コメントを入力する(最大40文字)", rows: "2", maxlength: "40", class: "comment__box"
             = form.submit "コメントする", class: "comment__btn"
-        - else
-          %h5
-            ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
       .comments
         %h6.comments__title
           = icon("fas", "comment-dots")
