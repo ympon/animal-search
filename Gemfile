@@ -60,7 +60,5 @@ gem 'ancestry'
 gem 'jquery-rails'
 gem 'devise'
 gem 'active_hash'
-
-group :production do
-  gem 'pg'
-end
+gem 'pg'
+gem 'fog-aws'
