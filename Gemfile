@@ -61,5 +61,4 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'active_hash'
 gem 'fog-aws'
-
-  gem 'pg'
+gem 'pg'
