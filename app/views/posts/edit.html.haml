@@ -4,10 +4,6 @@
       編集
   .edit-area
     .Post-new
-      .Post-new__text
-        = @post.text if @post.text?
-      .Post-new__date
-        = @post.created_at.strftime("%Y年%m月%d日 %H時%M分")
       .Post-new__image
         = image_tag(@post.image.to_s) if @post.image?
     = form_with model: @post, class: "Form",local: true do |f|
