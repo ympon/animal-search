@@ -61,6 +61,6 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'active_hash'
 
-group :production, :development do
+group :production do
   gem 'pg'
 end
