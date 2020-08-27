@@ -41,6 +41,8 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @posts = Post.where(category_id: params[:category_id])
+    @comment = Comment.new
+    @comments = @post.comments.includes(:user)
   end
 
   def search
