@@ -1,28 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## このアプリについて
+* 生き物の画像を投稿し教え合うコミュニケーションを目的としたアプリケーション
+* 制作期間約20日間
 
-Things you may want to cover:
+## Gem/Ver
+* Ruby 2.6.5
+* Rails 6.0.0
 
-* Ruby version
+* gem 'sass-rails'
+* gem 'byebug'
+* gem 'sqlite3'
+* gem 'web-console'
+* gem 'pry-rails'
+* gem 'haml-rails'
+* gem 'font-awesome-sass'
+* gem 'carrierwave'
+* gem 'mini_magick'
+* gem 'jquery-rails'
+* gem 'devise'
+* gem 'active_hash'
+* gem 'fog-aws'
+* gem 'pg'
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
+* 
 # animal-searchのDB設計
 
 ## usersテーブル
