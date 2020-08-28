@@ -23,7 +23,6 @@
 * gem 'fog-aws'
 * gem 'pg'
 
-* 
 # animal-searchのDB設計
 
 ## usersテーブル
