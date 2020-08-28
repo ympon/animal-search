@@ -1,5 +1,6 @@
 # README
-![Uploading 1e682a0aa293e6e50e8192a9ce43795b.jpg…]()
+![1e682a0aa293e6e50e8192a9ce43795b](https://user-images.githubusercontent.com/67887018/91512678-7e450f80-e91d-11ea-834e-afb051c6c6a8.jpg)
+
 
 ## このアプリについて
 * 生き物の画像を投稿し教え合うコミュニケーションを目的としたアプリケーション
