@@ -43,11 +43,24 @@ https://animal-search-ja.herokuapp.com/
 ## Gem/Ver
 * Ruby 2.6.5
 * Rails 6.0.0
+  
 
+* gem 'puma'
 * gem 'sass-rails'
+* gem 'webpacker'
+* gem 'turbolinks'
+* gem 'jbuilder'
+* gem 'bootsnap'
 * gem 'byebug'
 * gem 'sqlite3'
 * gem 'web-console'
+* gem 'listen'
+* gem 'spring'
+* gem 'spring-watcher-listen'
+* gem 'capybara', '>= 2.15'
+* gem 'selenium-webdriver'
+* gem 'webdrivers'
+* gem 'tzinfo-data'
 * gem 'pry-rails'
 * gem 'haml-rails'
 * gem 'font-awesome-sass'
@@ -58,6 +71,7 @@ https://animal-search-ja.herokuapp.com/
 * gem 'active_hash'
 * gem 'fog-aws'
 * gem 'pg'
+
 
 # animal-searchのDB設計
 
