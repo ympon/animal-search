@@ -7,7 +7,8 @@
         = f.text_field :text, class: 'form__inputContent', placeholder: "生き物の名前(空欄不可)"
         = f.label :image, class: 'form__inputImage' do
           = icon('far', 'image', class: 'form__icon')
-          = f.file_field :image, class: 'hidden'
+        = f.file_field :image, class: 'hidden',type: "file"
+        .preview
         .showCategory
           .showCategory__detail
             %h5 分類を選択する
