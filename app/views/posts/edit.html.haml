@@ -11,7 +11,8 @@
         = f.text_field :text, class: "Form__inputContent__edit", placeholder: "生き物の名前(空欄不可)"
         = f.label :image, class: "Form__inputImage" do
           = icon("far", "image", class: "Form__icon")
-          = f.file_field :image, class: "hidden"
+          = f.file_field :image, class: "hidden", type: "file"
+          .preview
       .showCategory__edit
         .showCategory__edit__detail
           %h5 分類を選択する
