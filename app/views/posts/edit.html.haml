@@ -5,7 +5,7 @@
   .edit-area
     .Post-new
       .Post-new__image
-        = image_tag(@post.image.to_s) if @post.image?
+        -# = image_tag(@post.image.to_s) if @post.image?
     = form_with model: @post, class: "Form",local: true do |f|
       .Form__contents
         = f.text_field :text, class: "Form__inputContent__edit", placeholder: "生き物の名前(空欄不可)"
